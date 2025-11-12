@@ -1,14 +1,24 @@
-import { useState } from 'react'
+import Navbar from './components/Navbar'
+import Home from './pages/Home'
+import { Routes, Route, Router, BrowserRouter } from 'react-router-dom'
+import Dashboard from './pages/Dashboard'
+import Notices from './pages/Notices'
+
 
 function App() {
 
   return (
-    <>
-      <h1 className='text-3xl text-center mt-4 font-bold underline'>
-        Campus Reflex - v0.1 Prototype
-      </h1>
-    </>
+
+    <BrowserRouter>
+
+      <Navbar />
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/dashboard' element={<Dashboard />} />
+        <Route path='/notices' element={<Notices />} />
+      </Routes>
+
+    </BrowserRouter>
   )
 }
-
 export default App
