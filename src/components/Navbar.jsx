@@ -1,15 +1,68 @@
 import { Link } from "react-router-dom";
+import { Bell, Home, LogOut, User } from "lucide-react";
 
 export default function Navbar() {
+
+    const navItems = [
+        { name: "Home", active: true },
+        { name: "Attendence", active: false },
+        { name: "Exam", active: false },
+        { name: "Session Plan", active: false },
+        { name: "Fees", active: false },
+        { name: "Marks", active: false },
+
+    ];
+
+
     return (
-        <nav className="text-white bg-gray-800 flex justify-between items-center px-8 py-4 shadow-md sticky top-0">
-            <h1 className="text-xl font-bold tracking-wide"> Campus Reflex</h1>
-            <ul className="flex gap-6">
-                <li> <Link to="/" className="hover:text-green-600">Home</Link></li>
-                <li> <Link to="/dashboard" className="hover:text-green-600">Dashboard</Link></li>
-                <li> <Link to="/notices" className="hover:text-green-600">Notices</Link></li>
-            </ul>
-        </nav>
+
+        <header className="bg-white shadow-sm sticky top-0 z-50">
+            <div className="max-w-9xl mx-auto px-16 h-16 flex items-center justify-between">
+
+                {/* logo and headers */}
+                <div className=" flex items-center space-x-3">
+                    <div className="w-12 h-12 bg-linear-to-r from-purple-500 to-blue-600 rounded-full"></div>
+                    <div className="hidden md:block ">
+                        <h2 className="text-purple-700 tracking-wide font-semibold">CampusReflex</h2>
+                        <p className="text-xs text-gray-500">Academic Year 2025-26</p>
+                    </div>
+                </div>
+
+                {/* Navigation Tabs */}
+
+                <nav className="hidden md:flex space-x-2">
+                    {navItems.map((item) => (
+                        <button
+                            key={item.name}
+                            className={`px-4 py-2 rounded-xl transition ${item.active
+                                ? "bg-purple-100 text-purple-700 font-medium"
+                                : "text-gray-600 hover:bg-gray-200"
+                                }`}
+                        >
+                            {item.name}
+                        </button>
+                    ))}
+                </nav>
+
+                {/* Icons */}
+
+                <div className="flex items-center space-x-6">
+
+                    <button className="realtive">
+                        <Bell className="w-6 h-6 text-gray-600 hover:text-purple-700 transition" />
+                    </button>
+
+                    <button className="p-2 bg-linear-to-r from-purple-300 to-blue-300 rounded-full">
+                        <User className="w-6 h-6 text-gray-100 hover:text-purple-600 transition" />
+                    </button>
+
+                    <button>
+                        <LogOut className="w-6 h-6 text-gray-600 hover:text-purple-700 transition" />
+                    </button>
+                </div>
+
+            </div>
+        </header>
     )
 }
 
