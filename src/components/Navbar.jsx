@@ -48,15 +48,15 @@ export default function Navbar() {
 
                 <div className="flex items-center space-x-6">
 
-                    <button className="realtive">
+                    <button className="realtive cursor-pointer">
                         <Bell className="w-6 h-6 text-gray-600 hover:text-purple-700 transition" />
                     </button>
 
-                    <button className="p-2 bg-linear-to-r from-purple-300 to-blue-300 rounded-full">
+                    <button className="p-2 bg-linear-to-r from-purple-300 to-blue-300 rounded-full cursor-pointer">
                         <User className="w-6 h-6 text-gray-100 hover:text-purple-600 transition" />
                     </button>
 
-                    <button>
+                    <button className="cursor-pointer">
                         <LogOut className="w-6 h-6 text-gray-600 hover:text-purple-700 transition" />
                     </button>
                 </div>
