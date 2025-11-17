@@ -28,9 +28,9 @@ export default function ImportantLinks() {
     ]
 
     return (
-        <section className="mt-12 border border-gray-100 p-4 rounded-2xl shadow ">
-            <h2 className=" text-xl  text-gray-800 mb-4">
-                <span className="w-1 h-6 rounded-2xl bg-purple-700"></span>
+        <section className="mt-12 border border-gray-100 p-6 rounded-2xl shadow ">
+            <h2 className="text-xl  text-gray-800 flex items-center mb-4">
+                <div className="w-1 h-6 rounded-2xl bg-purple-700 mr-2"></div>
                 Important Links
             </h2>
 

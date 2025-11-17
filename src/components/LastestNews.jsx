@@ -28,7 +28,8 @@ export default function LatestNews() {
             <div className="bg-white border border-gray-100 rounded-xl p-6 shadow-sm">
                 {/* Hearder */}
                 <div className="flex justify-between items-center mb-4">
-                    <h2 className="text-xl font-semibold text-gray-800">
+                    <h2 className="text-xl flex items-center text-gray-800">
+                        <div className="w-1 h-6 bg-blue-600 rounded-full mr-2"></div>
                         Latest News
                     </h2>
                     <button className="flex items-center gap-1 text-sm text-blue-600 hover:underline">

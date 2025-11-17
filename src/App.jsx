@@ -7,6 +7,8 @@ import Hero from './components/Hero'
 import StatsSection from './components/StatsSection'
 import ImportantLinks from './components/ImportantLinks'
 import LatestNews from './components/LastestNews'
+import AlertSection from './components/AlertSection'
+import UpcomingEvents from './components/UpcomingEvents'
 
 
 function App() {
@@ -25,11 +27,14 @@ function App() {
             <ImportantLinks />
           </div>
 
-          <div className="lg:col-span-1">
+          <div className="lg:col-span-1 space-y-4">
             <LatestNews />
+            <UpcomingEvents />
           </div>
 
-          <div className="lg:col-span-1"></div>
+          <div className="lg:col-span-1">
+            <AlertSection />
+          </div>
         </div>
       </div>
 
