@@ -32,7 +32,8 @@ export default function Navbar() {
 
                 <nav className="hidden md:flex space-x-2">
                     {navItems.map((item) => (
-                        <button
+                        <Link
+                            to={`/${item.name.toLowerCase().replace(" ", "")}`}
                             key={item.name}
                             className={`px-4 py-2 rounded-xl transition ${item.active
                                 ? "bg-purple-100 text-purple-700 font-medium"
@@ -40,7 +41,7 @@ export default function Navbar() {
                                 }`}
                         >
                             {item.name}
-                        </button>
+                        </Link>
                     ))}
                 </nav>
 
