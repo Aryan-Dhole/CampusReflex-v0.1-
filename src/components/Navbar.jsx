@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom";
-import { Bell, Home, LogOut, User } from "lucide-react";
+import { Bell, LogOut, User } from "lucide-react";
 
 export default function Navbar() {
 
     const navItems = [
         { name: "Home", active: true },
-        { name: "Attendence", active: false },
+        { name: "Attendance", active: false },
         { name: "Exam", active: false },
         { name: "Session Plan", active: false },
         { name: "Fees", active: false },
