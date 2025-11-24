@@ -3,19 +3,30 @@ import AttendanceHero from "./components/AttendanceHero"
 import AttendanceStats from "./components/AttendanceStats"
 import AttendanceTable from "./components/AttendanceTable"
 import AttendanceGraph from "./components/AttendanceGraph"
-
+import { useState } from "react"
 
 
 export default function AttendancePage() {
+    const [mode, setMode] = useState("table");
+
     return (
-        <div className="max-w-7xl mx-auto px-6 space-y-8">
-            <h1 className="text-3xl font-bold mt-6">Attendance Page</h1>
-            <p className="text-gray-600">Under Construction</p>
+        <div className="max-w-8xl mx-auto px-6 space-y-8">
 
             <AttendanceHero />
-            <AttendanceToggle />
+            <AttendanceToggle mode={mode} setmode={setMode} />
 
-            <AttendanceToggle />
+
+
+            {mode === "table" && (
+                <>
+                    <AttendanceStats />
+                    <AttendanceTable />
+                </>
+            )}
+
+            {mode === "schedule" && <AttendanceGraph />}
+
+
             <AttendanceTable />
         </div>
     );
