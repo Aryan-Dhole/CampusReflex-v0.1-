@@ -14,8 +14,8 @@ export default function AttendanceToggle({ mode, setMode }) {
                         className={`
                             flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-medium transition-all
                             ${mode === tab.id
-                                ? "bg-black text-white shadow"
-                                : "text-gray-700 hover:bg-gray-100"
+                                ? "bg-gray-900 text-white shadow"
+                                : "text-gray-700 hover:bg-gray-200"
                             }
                         `}
                     >

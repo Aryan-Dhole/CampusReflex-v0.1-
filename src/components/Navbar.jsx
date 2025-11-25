@@ -1,22 +1,26 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { Bell, LogOut, User } from "lucide-react";
 
 export default function Navbar() {
 
+    const location = useLocation();
+
+
     const navItems = [
-        { name: "Home", active: true },
-        { name: "Attendance", active: false },
-        { name: "Exam", active: false },
-        { name: "Session Plan", active: false },
-        { name: "Fees", active: false },
-        { name: "Marks", active: false },
+        { name: "Home", path: "/" },
+        { name: "Attendance", path: "/attendance" },
+        { name: "Exam", path: "/exam" },
+        { name: "Session Plan", path: "/session" },
+        { name: "Fees", path: "/fees" },
+        { name: "Marks", path: "/marks" },
 
     ];
 
 
     return (
 
-        <header className="bg-white shadow-sm sticky top-0 z-50">
+        <header className="bg-white shadow-sm sticky top-0 z-50"
+            key={location.pathname}>
             <div className="max-w-9xl mx-auto px-16 h-16 flex items-center justify-between">
 
                 {/* logo and headers */}
@@ -33,9 +37,9 @@ export default function Navbar() {
                 <nav className="hidden md:flex space-x-2">
                     {navItems.map((item) => (
                         <Link
-                            to={`/${item.name.toLowerCase().replace(" ", "")}`}
+                            to={item.path}
                             key={item.name}
-                            className={`px-4 py-2 rounded-xl transition ${item.active
+                            className={`px-4 py-2 rounded-xl transition ${location.pathname === item.path
                                 ? "bg-purple-100 text-purple-700 font-medium"
                                 : "text-gray-600 hover:bg-gray-200"
                                 }`}
