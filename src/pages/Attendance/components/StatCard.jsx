@@ -10,7 +10,7 @@ export default function StatCard({ title,
 
 
     return (
-        <div className={`p-6 rounded-2xl shadow-sm border ${gradient
+        <div className={`p-6 rounded-2xl hover:scale-105 transition shadow-sm border ${gradient
             ? "bg-linear-to-r from-purple-600 to-blue-600 text-white border-none shadow"
             : "bg-white border-gray-200"
             }`

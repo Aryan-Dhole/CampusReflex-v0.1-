@@ -2,23 +2,17 @@ import PercentBadge from "./PercentageBadge"
 import SubjectRow from "./SubjectRow"
 
 
-export default function AttendanceTable() {
+export default function AttendanceTable({ subjects }) {
 
-    const data = [
-        { code: "EP", name: "Engineering Physics", percent: "78%", status: "Warning" },
-        { code: "EPL", name: "Engineering Physics Lab", percent: "100%", status: "Good" },
-        { code: "LAC", name: "Linear Algebra & Calculus", percent: "86%", status: "Good" },
-        { code: "PSP", name: "Problem Solving with Programming", percent: "61%", status: "Low" },
-        { code: "EM", name: "Engineering Mechanics", percent: "86%", status: "Good" },
-        { code: "EML", name: "Mechanics Lab", percent: "71%", status: "Low" },
-        { code: "SDL", name: "Sustainable Development Lab", percent: "86%", status: "Good" },
-        { code: "CSE", name: "Computer Science Essentials", percent: "71%", status: "Low" },
-        { code: "SPF-1", name: "Skill Practice Forum 1", percent: "86%", status: "Good" },
-        { code: "IntP", name: "Internship Program", percent: "86%", status: "Good" },
-    ]
+    const numericPercentages = subjects.map(item =>
+        parseInt(item.percent.replace("%", ""))
+    );
 
+    const totalAverage =
+        numericPercentages.reduce((sum, value) => sum + value, 0) /
+        numericPercentages.length;
     return (
-        <div className="mt-10 bg-white p-6 rounded-2xl shadow-sm border border-gray-200">
+        <div className="mt-10 bg-white p-6 rounded-2xl shadow-md border border-gray-200 overflow-x-auto">
             <table className="w-full rounded-xl overflow-hidden">
                 <thead>
                     <tr className="text-left text-gray-600 border-b">
@@ -30,7 +24,7 @@ export default function AttendanceTable() {
                 </thead>
 
                 <tbody>
-                    {data.map((row, index) => (
+                    {subjects.map((row, index) => (
                         <SubjectRow
                             key={index}
                             code={row.code}
@@ -44,7 +38,7 @@ export default function AttendanceTable() {
                         <td className="py-4 px-4">Total Average</td>
                         <td className="py-4 px-4"></td>
                         <td className="py-4 px-4">
-                            <PercentBadge value="82%" />
+                            <PercentBadge value={`${Math.round(totalAverage)}%`} />
                         </td>
                         <td className="py-4 px-4"></td>
                     </tr>

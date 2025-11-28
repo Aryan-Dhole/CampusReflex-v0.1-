@@ -9,18 +9,44 @@ export default function AttendancePage() {
 
     const [mode, setMode] = useState("table"); // default
 
+    const subjects = [
+        { code: "EP", name: "Engineering Physics", percent: "76%", status: "Warning" },
+        { code: "EPL", name: "Engineering Physics Lab", percent: "100%", status: "Good" },
+        { code: "LAC", name: "Linear Algebra & Calculus", percent: "86%", status: "Good" },
+        { code: "PSP", name: "Problem Solving with Programming", percent: "61%", status: "Low" },
+        { code: "EM", name: "Engineering Mechanics", percent: "86%", status: "Good" },
+        { code: "EML", name: "Mechanics Lab", percent: "74%", status: "Low" },
+        { code: "SDL", name: "Sustainable Development Lab", percent: "86%", status: "Good" },
+        { code: "CSE", name: "Computer Science Essentials", percent: "71%", status: "Low" },
+        { code: "SPF-1", name: "Skill Practice Forum 1", percent: "86%", status: "Good" },
+        { code: "IntP", name: "Internship Program", percent: "86%", status: "Good" },
+    ]
+    const numericPercentages = subjects.map(item =>
+        parseInt(item.percent.replace("%", ""))
+    );
+
+    const totalAverage =
+        numericPercentages.reduce((sum, value) => sum + value, 0) /
+        numericPercentages.length;
+
+
+
     return (
         <div className="max-w-7xl mx-auto px-6 py-6 space-y-8">
 
-            <AttendanceHero />
+            <div className="mt-6">
+                <AttendanceHero />
+            </div>
 
-            <AttendanceToggle mode={mode} setMode={setMode} />
+            <div className="mt-8">
+                <AttendanceToggle mode={mode} setMode={setMode} />
+            </div>
 
             {/* TABLE VIEW */}
             {mode === "table" && (
                 <>
-                    <AttendanceStats />
-                    <AttendanceTable />
+                    <AttendanceStats subjects={subjects} totalAverage={totalAverage} />
+                    <AttendanceTable subjects={subjects} />
                 </>
             )}
 
