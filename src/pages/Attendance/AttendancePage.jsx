@@ -16,10 +16,10 @@ export default function AttendancePage() {
         { code: "PSP", name: "Problem Solving with Programming", percent: "61%", status: "Low" },
         { code: "EM", name: "Engineering Mechanics", percent: "86%", status: "Good" },
         { code: "EML", name: "Mechanics Lab", percent: "74%", status: "Low" },
-        { code: "SDL", name: "Sustainable Development Lab", percent: "86%", status: "Good" },
-        { code: "CSE", name: "Computer Science Essentials", percent: "71%", status: "Low" },
-        { code: "SPF-1", name: "Skill Practice Forum 1", percent: "86%", status: "Good" },
-        { code: "IntP", name: "Internship Program", percent: "86%", status: "Good" },
+        { code: "SDL", name: "Skill Development Lab", percent: "86%", status: "Good" },
+        { code: "CSE", name: "Cummunication Skill and Ethics", percent: "71%", status: "Low" },
+        { code: "SPF-1", name: "Sports and Physical Fitness - I", percent: "86%", status: "Good" },
+        { code: "IntP", name: "Integrated Perspective", percent: "86%", status: "Good" },
     ]
     const numericPercentages = subjects.map(item =>
         parseInt(item.percent.replace("%", ""))
