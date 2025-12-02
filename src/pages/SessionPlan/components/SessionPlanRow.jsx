@@ -3,7 +3,7 @@ import FileButton from "./FileButton";
 
 
 
-export default function SessonPlanRow({ subject, uploaded }) {
+export default function SessionPlanRow({ subject, uploaded, fileUrl }) {
     return (
         <div className="grid grid-cols-2 px-6 py-4 border-t border-gray-200 text-sm items-center">
             <div className="flex items-center gap-3">
@@ -14,7 +14,7 @@ export default function SessonPlanRow({ subject, uploaded }) {
             </div>
 
             <div className="flex justify-">
-                <FileButton uploaded={uploaded} />
+                <FileButton uploaded={uploaded} fileUrl={fileUrl} />
             </div>
 
         </div>
