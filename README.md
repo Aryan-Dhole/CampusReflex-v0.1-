@@ -1,8 +1,8 @@
-## CampusReflex Lite
+# CampusReflex Lite
 
 A modern, redesigned student portal UI built with React + Vite + Tailwind, inspired by real college portals but rebuilt with a cleaner, faster, and more intuitive user experience.
 
-# Features Built So Far
+## Features Built So Far
 - ✔ Attendance Dashboard (Fully Dynamic)
 Total Average Attendance (Auto-calculated)
 Defaulters & Good Standing cards
@@ -20,22 +20,22 @@ Gradient background
 Student info + roll number + department
 Reusable component
 
-# 🧩 Tech Stack
+## 🧩 Tech Stack
 React + Vite
 TailwindCSS
 Lucide Icons
 Reusable Components Architecture
 
-# 📌 Upcoming Features
+## 📌 Upcoming Features
 Weekly calendar system (attended/missed class indicators)
 Attendance graph (7-day / 30-day trends)
 Login & role-based access
 Full backend (MERN)
 Deployments
 
-# 🎯 Project Goal
+## 🎯 Project Goal
 A clean, fast, student-friendly portal UI — something every college wishes they had.
 
-# 🔗 Connect
+## 🔗 Connect
 Made with consistency & passion by Aryan Dhole.
 More updates coming soon
