@@ -3,7 +3,7 @@ import SessionPlanTable from "./components/SessionPlanTable";
 
 
 
-export default function SessonPlan() {
+export default function SessionPlan() {
 
 
     return (

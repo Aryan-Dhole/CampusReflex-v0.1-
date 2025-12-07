@@ -2,7 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "./components/Layout";
 import Home from "./pages/Home";
 import Attendance from "./pages/Attendance/AttendancePage";
-import SessonPlan from "./pages/SessionPlan/SessionPlanPage";
+import SessionPlan from "./pages/SessionPlan/SessionPlanPage";
 
 function App() {
   return (
@@ -12,7 +12,7 @@ function App() {
         <Route element={<Layout />}>
           <Route path="/" element={<Home />} />
           <Route path="/attendance" element={<Attendance />} />
-          <Route path="/session" element={<SessonPlan />} />
+          <Route path="/session" element={<SessionPlan />} />
         </Route>
 
       </Routes>
