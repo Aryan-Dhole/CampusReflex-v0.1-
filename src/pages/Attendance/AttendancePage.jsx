@@ -32,29 +32,31 @@ export default function AttendancePage() {
 
 
     return (
-        <div className="max-w-7xl mx-auto px-6 py-6 space-y-8">
+        <div className="min-h-screen bg-linear-to-br from-indigo-50 via-white to-purple-50">
+            <div className="max-w-7xl mx-auto px-6 py-6 space-y-8">
 
-            <div className="mt-6">
-                <AttendanceHero />
+                <div className="mt-6">
+                    <AttendanceHero />
+                </div>
+
+                <div className="mt-8">
+                    <AttendanceToggle mode={mode} setMode={setMode} />
+                </div>
+
+                {/* TABLE VIEW */}
+                {mode === "table" && (
+                    <>
+                        <AttendanceStats subjects={subjects} totalAverage={totalAverage} />
+                        <AttendanceTable subjects={subjects} />
+                    </>
+                )}
+
+                {/* GRAPH VIEW */}
+                {mode === "schedule" && (
+                    <AttendanceGraph />
+                )}
+
             </div>
-
-            <div className="mt-8">
-                <AttendanceToggle mode={mode} setMode={setMode} />
-            </div>
-
-            {/* TABLE VIEW */}
-            {mode === "table" && (
-                <>
-                    <AttendanceStats subjects={subjects} totalAverage={totalAverage} />
-                    <AttendanceTable subjects={subjects} />
-                </>
-            )}
-
-            {/* GRAPH VIEW */}
-            {mode === "schedule" && (
-                <AttendanceGraph />
-            )}
-
         </div>
     );
 }

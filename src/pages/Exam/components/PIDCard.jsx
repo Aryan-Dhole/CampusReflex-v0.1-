@@ -9,7 +9,7 @@ export default function PIDCard() {
     {
         name: "ARYAN HARIDAS DHOLE",
         rollNo: "615",
-        pid: "255095",
+        pid: "255005",
         program: "FE ELEC"
     }
 
