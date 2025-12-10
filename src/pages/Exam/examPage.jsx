@@ -1,6 +1,7 @@
 import PIDCard from "./components/PIDCard"
 import PerformanceOverview from "./components/PerformanceGrid"
 import PerformanceGraph from "./components/PerformanceGraph"
+import ResultSummary from "./components/ResultSummary"
 
 
 export default function Exam() {
@@ -22,7 +23,7 @@ export default function Exam() {
         },
         {
             subject: "EP(MSE)",
-            passing: 6,
+            passing: 8,
             yourScore: 6,
             topper: 15,
             oufof: 15
@@ -49,6 +50,8 @@ export default function Exam() {
                 <PIDCard subjectScores={subjectScores} />
                 <PerformanceOverview subjectScores={subjectScores} />
                 <PerformanceGraph subjectScores={subjectScores} />
+                <ResultSummary />
+
             </div>
         </section>
     )
