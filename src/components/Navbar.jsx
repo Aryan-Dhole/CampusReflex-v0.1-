@@ -12,7 +12,7 @@ export default function Navbar() {
         { name: "Exam", path: "/exam" },
         { name: "Session Plan", path: "/session" },
         { name: "Fees", path: "/fees" },
-        { name: "Marks", path: "/marks" },
+        { name: "Semester", path: "/semester" },
 
     ];
 
