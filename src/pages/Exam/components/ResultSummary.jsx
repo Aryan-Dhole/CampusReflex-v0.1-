@@ -6,7 +6,7 @@ export default function ResultSummary() {
         {
             examName: "MSE",
             subject: "COMMUNICATION SKILLS AND ETHICS(CSE)",
-            teacherName: "Ms. DEEPA PANAKKAL",
+            teacherName: "Ms. Faculty Name",
             total: 1,
             pass: 1,
             fail: 0,
@@ -18,7 +18,7 @@ export default function ResultSummary() {
         {
             examName: "MSE",
             subject: "ENGINEERING MECHANICS(EM)",
-            teacherName: "Ms. ARCHANA PANCHARYA",
+            teacherName: "Ms. Faculty Name",
             total: 1,
             pass: 1,
             fail: 0,
@@ -30,7 +30,7 @@ export default function ResultSummary() {
         {
             examName: "MSE",
             subject: "ENGINEERING PHYSICS(EP)",
-            teacherName: "Mr. SUNIL THOMAS VARGHESE",
+            teacherName: "Mr. Instructor",
             total: 1,
             pass: 0,
             fail: 1,
@@ -42,7 +42,7 @@ export default function ResultSummary() {
         {
             examName: "MSE",
             subject: "LINEAR ALGEBRA AND CALCULUS(LAC)",
-            teacherName: "Ms. ASMA SHOUKAT HAZIR",
+            teacherName: "Ms. Instructor",
             total: 1,
             pass: 1,
             fail: 0,
@@ -54,7 +54,7 @@ export default function ResultSummary() {
         {
             examName: "MSE",
             subject: "PROBLEM SOLVING WITH PROGRAMMING(PSP)",
-            teacherName: "Mrs. HEENA SINGH",
+            teacherName: "Mrs. Faculty Name",
             total: 1,
             pass: 1,
             fail: 0,

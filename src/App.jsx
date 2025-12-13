@@ -3,7 +3,7 @@ import Layout from "./components/Layout";
 import Home from "./pages/Home";
 import Attendance from "./pages/Attendance/AttendancePage";
 import SessionPlan from "./pages/SessionPlan/SessionPlanPage";
-import Exam from "./pages/Exam/examPage";
+import Exam from "./pages/Exam/examOverviewPage";
 
 function App() {
   return (
