@@ -1,6 +1,8 @@
+// =================================
+// DashBoard Domain
+// =================================
 
-// DashBoard
-
+// alerts
 const alerts = [
     {
         title: "Low Attendance Alert",
@@ -29,6 +31,9 @@ const alerts = [
     }
 ]
 
+
+// Important links
+
 const links = [
     {
         label: "Download SFIT Matlab",
@@ -53,6 +58,9 @@ const links = [
     },
 ]
 
+
+// Latest News
+
 const news = [
     {
         date: "Nov 14",
@@ -70,6 +78,9 @@ const news = [
         desc: "Annual sports event sceduled for november 5."
     },
 ]
+
+
+// stats cards
 
 const stats = [
     {
@@ -98,6 +109,9 @@ const stats = [
     }
 ]
 
+
+// Upcoming Events
+
 const events = [
     {
         title: "Technical Symposium",
@@ -113,7 +127,13 @@ const events = [
     }
 ]
 
-// Attendance
+
+// =================================
+// Attendance Domain
+// =================================
+
+
+// Subjects
 
 const subjects = [
     { code: "EP", name: "Engineering Physics", percent: "76%", status: "Warning" },
@@ -128,7 +148,10 @@ const subjects = [
     { code: "IntP", name: "Integrated Perspective", percent: "86%", status: "Good" },
 ]
 
-const temporaryevents = [
+
+//  Raw attendance sessions (used to compute percentage & status)
+
+const lectureAttendance = [
     {
         day: "MON",
         start: "9:00 AM",
@@ -163,8 +186,16 @@ const temporaryevents = [
     }
 ];
 
-// Exam
-const StudentData =
+
+
+// =================================
+// Exam Domain
+// =================================
+
+
+// Student Data
+
+const studentData =
 {
     name: "ARYAN HARIDAS DHOLE",
     rollNo: "615",
@@ -172,43 +203,49 @@ const StudentData =
     program: "FE ELEC"
 }
 
+
+// Marks per subject for a single exam
+
 const subjectScores = [
     {
         subject: "CSE(MSE)",
         passing: 8,
         yourScore: 14,
         topper: 20,
-        oufOf: 20
+        outOf: 20
     },
     {
         subject: "EM(MSE)",
         passing: 8,
         yourScore: 19,
         topper: 20,
-        oufOf: 20
+        outOf: 20
     },
     {
         subject: "EP(MSE)",
         passing: 8,
         yourScore: 6,
         topper: 15,
-        oufOf: 15
+        outOf: 15
     },
     {
         subject: "LAC(MSE)",
         passing: 0,
         yourScore: 18,
         topper: 20,
-        oufOf: 20
+        outOf: 20
     },
     {
         subject: "PSP(MSE)",
         passing: 0,
         yourScore: 11,
         topper: 15,
-        oufOf: 15
+        outOf: 15
     }
 ]
+
+
+// Exam Result Table Data
 
 const examResults = [
     {
@@ -273,8 +310,16 @@ const examResults = [
     }
 ];
 
-// Session Plan
-const data = [
+
+
+// =================================
+// Session plan Domain
+// =================================
+
+
+// Session Plan Data
+
+const sessionPlans = [
     { subject: "ENGINEERING PHYSICS", uploaded: false, fileUrl: null },
     { subject: "LINEAR ALGEBRA AND CALCULUS", uploaded: false, fileUrl: null },
     { subject: "PROBLEM SOLVING WITH PROGRAMMING", uploaded: true, fileUrl: "/public/session-plans/dummy.pdf" },
