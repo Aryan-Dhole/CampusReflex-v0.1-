@@ -39,3 +39,6 @@ A clean, fast, student-friendly portal UI — something every college wishes the
 ## 🔗 Connect
 Made with consistency & passion by Aryan Dhole.
 More updates coming soon
+
+note:
+CampusReflex Paused on Jan 13. Will return after Phase-1 monetization milestone.
